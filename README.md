@@ -4,6 +4,108 @@
 - If you need to use it, please pay attention to compatibility (as of now, it is compatible with the casdoor latest version from April 2024)
 - 如需使用请注意兼容性(截至目前，兼容2024年4月的最新版casdoor)
 - 为了使用该独立支持，你需要修改`casdoor/web/src/Setting.js`配置文件中的两处(分别是：`OtherProviderInfo`和`getProviderTypeOptions`下的SMS部分)
+需要修改的只有两处，示例片段:
+```js
+export const OtherProviderInfo = {
+  SMS: {
+    "Aliyun SMS": {
+      logo: `${StaticBaseUrl}/img/social_aliyun.png`,
+      url: "https://aliyun.com/product/sms",
+    },
+    "Amazon SNS": {
+      logo: `${StaticBaseUrl}/img/social_aws.png`,
+      url: "https://aws.amazon.com/cn/sns/",
+    },
+    "Azure ACS": {
+      logo: `${StaticBaseUrl}/img/social_azure.png`,
+      url: "https://azure.microsoft.com/en-us/products/communication-services",
+    },
+    "Infobip SMS": {
+      logo: `${StaticBaseUrl}/img/social_infobip.png`,
+      url: "https://portal.infobip.com/homepage/",
+    },
+    "Tencent Cloud SMS": {
+      logo: `${StaticBaseUrl}/img/social_tencent_cloud.jpg`,
+      url: "https://cloud.tencent.com/product/sms",
+    },
+    "Baidu Cloud SMS": {
+      logo: `${StaticBaseUrl}/img/social_baidu_cloud.png`,
+      url: "https://cloud.baidu.com/product/sms.html",
+    },
+    "Volc Engine SMS": {
+      logo: `${StaticBaseUrl}/img/social_volc_engine.jpg`,
+      url: "https://www.volcengine.com/products/cloud-sms",
+    },
+    "Huawei Cloud SMS": {
+      logo: `${StaticBaseUrl}/img/social_huawei.png`,
+      url: "https://www.huaweicloud.com/product/msgsms.html",
+    },
+    "UCloud SMS": {
+      logo: `${StaticBaseUrl}/img/social_ucloud.png`,
+      url: "https://www.ucloud.cn/site/product/usms.html",
+    },
+    "Twilio SMS": {
+      logo: `${StaticBaseUrl}/img/social_twilio.svg`,
+      url: "https://www.twilio.com/messaging",
+    },
+    "SmsBao SMS": {
+      logo: `${StaticBaseUrl}/img/social_smsbao.png`,
+      url: "https://www.smsbao.com/",
+    },
+    "SUBMAIL SMS": {
+      logo: `${StaticBaseUrl}/img/social_submail.svg`,
+      url: "https://www.mysubmail.com",
+    },
+    "Msg91 SMS": {
+      logo: `${StaticBaseUrl}/img/social_msg91.ico`,
+      url: "https://control.msg91.com/app/",
+    },
+    "OSON SMS": {
+      logo: "https://osonsms.com/images/osonsms-logo.svg",
+      url: "https://osonsms.com/",
+    },
+    "Custom HTTP SMS": {
+      logo: `${StaticBaseUrl}/img/social_default.png`,
+      url: "https://casdoor.org/docs/provider/sms/overview",
+    },
+    "Mock SMS": {
+      logo: `${StaticBaseUrl}/img/social_default.png`,
+      url: "",
+    },
+    "Quanm SMS": {  // 添加这段
+      logo: "https://static.mp.quanmwl.com/static/images/favicon_dev.ico",
+      url: "https://dev.quanmwl.com/console",
+    },
+  },
+// ......
+// 不用改的地方省略
+// ......
+else if (category === "SMS") {
+    return (
+      [
+        {id: "Aliyun SMS", name: "Alibaba Cloud SMS"},
+        {id: "Amazon SNS", name: "Amazon SNS"},
+        {id: "Azure ACS", name: "Azure ACS"},
+        {id: "Custom HTTP SMS", name: "Custom HTTP SMS"},
+        {id: "Mock SMS", name: "Mock SMS"},
+        {id: "OSON SMS", name: "OSON SMS"},
+        {id: "Infobip SMS", name: "Infobip SMS"},
+        {id: "Tencent Cloud SMS", name: "Tencent Cloud SMS"},
+        {id: "Baidu Cloud SMS", name: "Baidu Cloud SMS"},
+        {id: "Volc Engine SMS", name: "Volc Engine SMS"},
+        {id: "Huawei Cloud SMS", name: "Huawei Cloud SMS"},
+        {id: "UCloud SMS", name: "UCloud SMS"},
+        {id: "Twilio SMS", name: "Twilio SMS"},
+        {id: "SmsBao SMS", name: "SmsBao SMS"},
+        {id: "SUBMAIL SMS", name: "SUBMAIL SMS"},
+        {id: "Msg91 SMS", name: "Msg91 SMS"},
+        {id: "Quanm SMS", name: "Quanm SMS"},  // 添加这段
+      ]
+    );
+  }
+// ......
+// ......
+```
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/casdoor/go-sms-sender)](https://goreportcard.com/report/github.com/casdoor/go-sms-sender)
 [![Go](https://github.com/casdoor/go-sms-sender/actions/workflows/ci.yml/badge.svg)](https://github.com/casdoor/go-sms-sender/actions/workflows/ci.yml)
