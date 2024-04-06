@@ -3,6 +3,7 @@
 ## This is a special version that is independently maintained
 - If you need to use it, please pay attention to compatibility (as of now, it is compatible with the casdoor latest version from April 2024)
 - 如需使用请注意兼容性(截至目前，兼容2024年4月的最新版casdoor)
+- In order to use this independent support, you need to modify two parts of the `casdoor/web/src/Setting.js` configuration file (namely, the SMS section under`OtherProviderInfo`and`getProviderTypeOptions`)There are only two areas that need to be modified.
 - 为了使用该独立支持，你需要修改`casdoor/web/src/Setting.js`配置文件中的两处(分别是：`OtherProviderInfo`和`getProviderTypeOptions`下的SMS部分)
 需要修改的只有两处，示例片段:
 ```js
@@ -72,7 +73,7 @@ export const OtherProviderInfo = {
       logo: `${StaticBaseUrl}/img/social_default.png`,
       url: "",
     },
-    "Quanm SMS": {  // 添加这段
+    "Quanm SMS": {  // 添加这段  Add this
       logo: "https://static.mp.quanmwl.com/static/images/favicon_dev.ico",
       url: "https://dev.quanmwl.com/console",
     },
@@ -99,7 +100,7 @@ else if (category === "SMS") {
         {id: "SmsBao SMS", name: "SmsBao SMS"},
         {id: "SUBMAIL SMS", name: "SUBMAIL SMS"},
         {id: "Msg91 SMS", name: "Msg91 SMS"},
-        {id: "Quanm SMS", name: "Quanm SMS"},  // 添加这段
+        {id: "Quanm SMS", name: "Quanm SMS"},  // 添加这段  Add this
       ]
     );
   }
