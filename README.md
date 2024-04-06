@@ -3,6 +3,7 @@
 ## This is a special version that is independently maintained
 - If you need to use it, please pay attention to compatibility (as of now, it is compatible with the casdoor latest version from April 2024)
 - 如需使用请注意兼容性(截至目前，兼容2024年4月的最新版casdoor)
+- 为了使用该独立支持，你需要修改`casdoor/web/src/Setting.js`配置文件中的两处(分别是：`OtherProviderInfo`和`getProviderTypeOptions`下的SMS部分)
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/casdoor/go-sms-sender)](https://goreportcard.com/report/github.com/casdoor/go-sms-sender)
 [![Go](https://github.com/casdoor/go-sms-sender/actions/workflows/ci.yml/badge.svg)](https://github.com/casdoor/go-sms-sender/actions/workflows/ci.yml)
