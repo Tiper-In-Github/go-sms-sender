@@ -1,4 +1,8 @@
-# go-sms-sender
+# go-sms-sender --For Quanming Network
+
+## This is a special version that is independently maintained
+- If you need to use it, please pay attention to compatibility (as of now, it is compatible with the casdoor latest version from April 2024)
+- 如需使用请注意兼容性(截至目前，兼容2024年4月的最新版casdoor)
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/casdoor/go-sms-sender)](https://goreportcard.com/report/github.com/casdoor/go-sms-sender)
 [![Go](https://github.com/casdoor/go-sms-sender/actions/workflows/ci.yml/badge.svg)](https://github.com/casdoor/go-sms-sender/actions/workflows/ci.yml)
@@ -25,6 +29,7 @@ We support the following SMS providers, welcome to contribute.
 - [Huyi](https://www.ihuyi.com/)
 - [Netgsm](https://www.netgsm.com.tr/)
 - [Oson Sms](https://osonsms.com/)
+- [Quanming Sms](https://dev.quanmwl.com/)
 
 ## Installation
 
